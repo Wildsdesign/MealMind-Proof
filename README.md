@@ -9,6 +9,22 @@ behind Justin Wilds' first serious application build without exposing the
 turnkey product, private integration details, deployment configuration, or
 patient-facing implementation surface.
 
+## How To Read This Repo
+
+Start here if you are evaluating Justin Wilds or MealMind technically:
+
+1. Read [WHAT_THIS_PROVES.md](WHAT_THIS_PROVES.md) for the short evaluator view.
+2. Read [ARCHITECTURE.md](ARCHITECTURE.md) for the system shape and integration boundary.
+3. Read [ADR_DIGEST.md](ADR_DIGEST.md) for decision discipline.
+4. Read [SECURITY_AND_PHI.md](SECURITY_AND_PHI.md) for the PHI boundary and
+   safety posture.
+5. Read [VOICE_AND_AI.md](VOICE_AND_AI.md) for AI and voice integration posture.
+6. Read [OPERATIONS.md](OPERATIONS.md) for the patient and operator workflows.
+7. Read [CODE_EXCERPTS.md](CODE_EXCERPTS.md) and browse `code-samples/` for
+   implementation style.
+8. Read [PUBLIC_BOUNDARY.md](PUBLIC_BOUNDARY.md) before asking why production
+   internals are not here.
+
 ## What MealMind Demonstrates
 
 MealMind is a patient-facing meal ordering layer designed for hospital
@@ -47,6 +63,7 @@ documentation and sanitized excerpts.
 
 | File | Purpose |
 | --- | --- |
+| `WHAT_THIS_PROVES.md` | Short evaluator guide: what the repo is evidence for |
 | `ARCHITECTURE.md` | System shape, data flow, integration boundary |
 | `ADR_DIGEST.md` | Selected decisions and why they matter |
 | `VOICE_AND_AI.md` | Voice ordering and AI posture without vendor lock-in |
@@ -54,6 +71,8 @@ documentation and sanitized excerpts.
 | `OPERATIONS.md` | Patient, guest, display, and staff workflows |
 | `CODE_EXCERPTS.md` | Guide to the included representative samples |
 | `code-samples/` | Sanitized implementation excerpts |
+| `PUBLIC_BOUNDARY.md` | What this proof repo intentionally excludes |
+| `PROOF_REPO_STANDARD.md` | Reusable standard for Wilds public proof repos |
 
 ## What Is Deliberately Omitted
 
