@@ -1,12 +1,12 @@
 # What This Proves
 
-This repo exists for a technical evaluator who wants to understand what Justin
-Wilds can build without receiving the private MealMind production source.
+This repo exists for a technical evaluator who wants to understand the
+engineering behind MealMind without receiving the private production source.
 
 ## The Short Version
 
-MealMind proves that Justin can design and ship a patient-facing healthcare
-application under real operational and regulatory constraints:
+MealMind demonstrates a patient-facing healthcare application, designed and
+shipped under real operational and regulatory constraints:
 
 - PHI-minimizing architecture, not PHI-tolerating architecture
 - adapter-first integration design that keeps the host dietary system at arm's
@@ -43,9 +43,9 @@ show that posture without exposing the private implementation.
 
 ### 4. Delivery Judgment
 
-MealMind was Justin's first serious application build. The ADR discipline, voice
-integration posture, and security design from the beginning show that delivery
-habits were set early rather than retrofitted.
+The ADR discipline, voice integration posture, and security design from the
+beginning show that delivery habits were set early in this build rather than
+retrofitted.
 
 ### 5. Boundary Judgment
 

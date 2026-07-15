@@ -5,13 +5,12 @@ ordering application.
 
 This repository is intentionally **not** the production source tree. It exists
 to show the thinking, architecture, product judgment, and representative code
-behind Justin Wilds' first serious application build without exposing the
-turnkey product, private integration details, deployment configuration, or
-patient-facing implementation surface.
+behind MealMind without exposing the turnkey product, private integration
+details, deployment configuration, or patient-facing implementation surface.
 
 ## How To Read This Repo
 
-Start here if you are evaluating Justin Wilds or MealMind technically:
+Start here if you are evaluating MealMind technically:
 
 1. Read [WHAT_THIS_PROVES.md](WHAT_THIS_PROVES.md) for the short evaluator view.
 2. Read [ARCHITECTURE.md](ARCHITECTURE.md) for the system shape and integration boundary.

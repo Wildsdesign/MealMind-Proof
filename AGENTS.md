@@ -8,7 +8,7 @@ production repository and must not become a runnable clone.
 Every file in this repo answers one or more of five evaluator questions:
 
 1. What is this product or system?
-2. What does this repo prove about Justin's work?
+2. What does this repo prove about the engineering behind it?
 3. What architecture or operating decisions matter?
 4. What is safe to show publicly?
 5. What is intentionally withheld?
@@ -39,8 +39,8 @@ The required files for a complete Wilds proof repo are:
   names, or environment files.
 - Do not add enough schema, adapter, or auth detail to recreate the production
   product.
-- Keep code samples excerpted, sanitized, and non-runnable unless Justin
-  explicitly approves otherwise.
+- Keep code samples excerpted, sanitized, and non-runnable unless explicitly
+  approved otherwise.
 - The public/private boundary is defined in `PUBLIC_BOUNDARY.md`. It must be
   respected in every file and excerpt.
 
