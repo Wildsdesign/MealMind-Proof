@@ -5,11 +5,10 @@ engineering behind MealMind without receiving the private production source.
 
 ## The Short Version
 
-MealMind demonstrates a patient-facing healthcare application, designed and
-shipped under real operational and regulatory constraints:
+MealMind demonstrates a patient-facing healthcare application, designed with operational and regulatory constraints in mind:
 
 - PHI-minimizing architecture, not PHI-tolerating architecture
-- adapter-first integration design that keeps the host dietary system at arm's
+- adapter-first integration design that keeps the upstream system at arm's
   length rather than baking it into the product
 - accessible, low-friction UX grounded in actual patient-room operating
   conditions
@@ -30,8 +29,8 @@ not because they looked good on a feature list.
 
 ### 2. Architecture Judgment
 
-The host dietary-system integration lives behind an adapter boundary. That means
-the host system can change without rewriting the product. The proof repo
+The upstream-system integration lives behind an adapter boundary. That means
+the upstream system can change without rewriting the product. The proof repo
 describes the integration shape without exposing the private adapter detail.
 
 ### 3. Security and Privacy Judgment
@@ -49,9 +48,7 @@ retrofitted.
 
 ### 5. Boundary Judgment
 
-This repo shows enough to evaluate the work while excluding the private host
-system, schema, deployment artifacts, and real patient data that give MealMind
-its operational and commercial value.
+This repo shows enough to evaluate the work while excluding the private upstream system, schema, deployment artifacts, and real patient data that stay private.
 
 ## What This Does Not Prove
 
@@ -59,5 +56,4 @@ This repo does not prove every implementation detail of MealMind. It is not a
 runnable clone and should not become one.
 
 For deeper evaluation, use this repo as a public architecture and product
-artifact, then request a guided technical walkthrough if a private review is
-appropriate.
+artifact.

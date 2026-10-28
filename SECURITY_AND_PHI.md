@@ -5,7 +5,7 @@ sensitive patient information the application owns or exposes.
 
 ## PHI Boundary
 
-The browser should not receive host-system patient identifiers. The server
+The browser should not receive upstream-system patient identifiers. The server
 validates the patient session and returns an internal session identifier for the
 UI workflow.
 
@@ -13,7 +13,7 @@ UI workflow.
 flowchart LR
     Browser["Browser"]
     API["Server"]
-    Host["Host dietary system"]
+    Host["Upstream system"]
     Cache[("Minimized session cache")]
 
     Browser -->|access fields| API
@@ -48,7 +48,7 @@ This proof repo does not include:
 
 - real patient data
 - real menus
-- host-system contracts
+- upstream-system contracts
 - environment variables
 - deployment workflows
 - production screenshots containing identifying information

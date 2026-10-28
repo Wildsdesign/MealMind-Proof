@@ -54,6 +54,6 @@ experience should not depend on repeated live model calls for stable menu text.
 
 ## Risk Discipline
 
-AI should not invent diet permissions, override host-system restrictions, expose
+AI should not invent diet permissions, override upstream-system restrictions, expose
 patient identifiers, or submit irreversible actions without the same backend
 validation used by the touch interface.

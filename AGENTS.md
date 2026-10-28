@@ -18,7 +18,7 @@ The required files for a complete Wilds proof repo are:
 | File | Purpose |
 | --- | --- |
 | `README.md` | Entry point, evaluator path, proof contents, status |
-| `WHAT_THIS_PROVES.md` | Short proof argument for a recruiter or technical evaluator |
+| `WHAT_THIS_PROVES.md` | Short proof argument for a technical evaluator |
 | `PUBLIC_BOUNDARY.md` | Explicit safe-to-show and not-safe-to-show boundary |
 | `ARCHITECTURE.md` | Product-specific system shape |
 | `ADR_DIGEST.md` | Sanitized decisions with rationale |
@@ -32,7 +32,7 @@ The required files for a complete Wilds proof repo are:
 ## Hard Rules
 
 - Do not copy full source files from the private MealMind repo.
-- Do not mention the private host dietary-system vendor by name.
+- Do not mention the private upstream-system vendor by name.
 - Do not add real patient, facility, menu, or uploaded asset data.
 - Do not add PHI-like data of any kind, real or synthesized.
 - Do not add deployment workflows, resource names, connection strings, secret

@@ -1,7 +1,6 @@
 # Architecture
 
-MealMind is a patient meal ordering surface layered over an existing hospital
-dietary system. The host system remains the operational source of truth; MealMind
+MealMind is a patient meal ordering surface layered over an existing upstream system. The upstream system remains the operational source of truth; MealMind
 provides a modern, accessible ordering experience and a controlled cache/session
 layer.
 
@@ -23,7 +22,7 @@ flowchart LR
     end
 
     DB[("SQL Server")]
-    Host["Host dietary system"]
+    Host["Upstream system"]
 
     Patient --> Client
     Guest --> Client
@@ -43,14 +42,14 @@ flowchart LR
 | --- | --- |
 | Client | Patient and guest UX, accessibility, language presentation |
 | API | Auth flow, CSRF, session handling, order submission, route boundaries |
-| Session/cache | Reduced host-system round trips, internal IDs, order state |
-| Adapter | Private boundary to host dietary system |
+| Session/cache | Reduced upstream-system round trips, internal IDs, order state |
+| Adapter | Private boundary to upstream system |
 | AI/voice | Optional translation, voice interaction, and assisted ordering |
 
 ## Core Principle
 
 MealMind is not the source of truth for clinical or dietary authority. It is a
-patient experience and workflow layer. The host system owns eligibility, menu
+patient experience and workflow layer. The upstream system owns eligibility, menu
 availability, and final order acceptance.
 
 ## Request Flow
@@ -60,12 +59,12 @@ sequenceDiagram
     participant Patient
     participant Client
     participant API
-    participant Host as Host dietary system
+    participant Host as Upstream system
     participant DB as SQL cache
 
     Patient->>Client: Enters simple access information
     Client->>API: Starts session
-    API->>Host: Validates against host system
+    API->>Host: Validates against upstream system
     Host-->>API: Eligible session data
     API->>DB: Stores minimized session/cache record
     API-->>Client: Internal session id
@@ -81,13 +80,13 @@ sequenceDiagram
 
 ## Integration Boundary
 
-The production system includes private host-system integration details. This
+The private codebase includes private upstream-system integration details. This
 proof repo only documents the boundary:
 
-- host system validates meal eligibility
-- host system remains the order authority
+- upstream system validates meal eligibility
+- upstream system remains the order authority
 - MealMind stores minimized session/cache data
-- browser receives an internal ID, not the host-system patient identifier
+- browser receives an internal ID, not the upstream-system patient identifier
 - failures are translated into patient-safe messages
 
 ## Why The Architecture Matters
@@ -98,6 +97,6 @@ Hospital meal ordering is not generic ecommerce:
 - ordering must respect diet and allergy limits
 - guest ordering must avoid exposing patient data
 - bedside devices may be shared or locked down
-- network and host-system failures must degrade safely
+- network and upstream-system failures must degrade safely
 
 MealMind's architecture is built around those constraints.

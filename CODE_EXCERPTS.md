@@ -29,7 +29,7 @@ Safe excerpts show:
 Safe excerpts do not include:
 
 - private business rules
-- host dietary-system adapter details or vendor names
+- upstream-system adapter details or vendor names
 - production query logic
 - schema or migration detail
 - route maps or endpoint identifiers

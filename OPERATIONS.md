@@ -11,7 +11,7 @@ The patient-facing workflow prioritizes clarity:
 2. app presents allowed meals and menu items
 3. patient browses visually
 4. patient adds items by touch or voice
-5. order is submitted through the host-system boundary
+5. order is submitted through the upstream-system boundary
 6. patient receives a clear result
 
 ## Guest Ordering
@@ -34,7 +34,7 @@ hospital environment.
 
 Expected failures:
 
-- host system unavailable
+- upstream system unavailable
 - session expires
 - order period no longer available
 - voice service unavailable

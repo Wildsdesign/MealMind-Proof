@@ -14,7 +14,7 @@ still using enterprise-compatible infrastructure.
 ## ADR-002: PHI Isolation
 
 **Decision:** Keep sensitive patient identifiers on the server side. The browser
-receives an internal session identifier, not the host-system patient identifier.
+receives an internal session identifier, not the upstream-system patient identifier.
 
 **Why it matters:** The patient UX can be modern without expanding the PHI blast
 radius into browser storage.
@@ -30,7 +30,7 @@ stay.
 
 ## ADR-004: Host Adapter Pattern
 
-**Decision:** Put all host dietary-system calls behind an adapter boundary.
+**Decision:** Put all upstream-system calls behind an adapter boundary.
 
 **Why it matters:** Private integration details stay contained, and the patient
 experience is not coupled directly to the host API's raw shape.
@@ -40,8 +40,8 @@ experience is not coupled directly to the host API's raw shape.
 **Decision:** Hydrate a minimized local session cache after host validation,
 then serve patient UX reads from that cache.
 
-**Why it matters:** The app reduces host-system round trips while preserving the
-host system as the authority.
+**Why it matters:** The app reduces upstream-system round trips while preserving the
+upstream system as the authority.
 
 ## ADR-007: Voice AI Pipeline
 

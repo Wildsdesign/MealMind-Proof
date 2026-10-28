@@ -3,9 +3,9 @@
 Curated technical proof artifact for MealMind, a Wilds, Inc. patient meal
 ordering application.
 
-This repository is intentionally **not** the production source tree. It exists
+This repository is intentionally **not** the private source tree. It exists
 to show the thinking, architecture, product judgment, and representative code
-behind MealMind without exposing the turnkey product, private integration
+behind MealMind without exposing the private implementation, private integration
 details, deployment configuration, or patient-facing implementation surface.
 
 ## How To Read This Repo
@@ -34,7 +34,7 @@ environments:
 - multilingual menu presentation
 - voice ordering as an optional enhancement
 - bedside TV / companion display concepts
-- host dietary-system integration boundary
+- upstream-system integration boundary
 - PHI-minimizing session design
 - accessible, low-friction patient UX
 
@@ -44,13 +44,13 @@ and operational constraints?
 
 ## Technical Shape
 
-The production system is a full-stack TypeScript application:
+The private codebase is a full-stack TypeScript application:
 
 ```text
 React + TypeScript client
 Express + Node backend
 SQL Server persistence
-host dietary-system adapter boundary
+upstream-system adapter boundary
 voice and AI services behind optional feature surfaces
 Azure deployment target
 ```
@@ -81,12 +81,12 @@ This proof repo does not include:
 - production Git history
 - deployment workflows
 - environment files or real resource names
-- private host-system contracts
+- private upstream-system contracts
 - real patient, facility, or menu data
 - enough schema or code to recreate the product
 
-That boundary is intentional. The repo proves the work without giving away the
-asset.
+That boundary is intentional. The repo proves the work without exposing the
+private implementation.
 
 ## Representative Strengths
 
@@ -99,4 +99,4 @@ asset.
 
 ## Status
 
-Curated proof artifact. Production MealMind remains private.
+Curated proof artifact. The MealMind source remains private.

@@ -19,7 +19,7 @@ evaluator-oriented rather than cloneable.
 ## Not Safe To Show Here
 
 - production source code
-- private host dietary-system vendor name or adapter contracts
+- private upstream-system vendor name or adapter contracts
 - real patient, facility, menu, or uploaded asset data
 - database schema or migrations sufficient to recreate the application
 - full route or endpoint maps
@@ -33,4 +33,4 @@ evaluator-oriented rather than cloneable.
 MealMind operates under healthcare data obligations. Even a proof artifact must
 handle that boundary carefully. The private integration and patient-facing
 surfaces are the product. This repo proves the design thinking behind them
-without exposing the asset.
+without exposing the private implementation.
